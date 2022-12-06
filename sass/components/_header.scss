@@ -1,0 +1,71 @@
+.header {
+  border-bottom: 1px solid $border-btn;
+
+  &__logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  &__logo--color {
+    color: $black;
+  }
+}
+
+.header--container {
+  display: flex;
+  align-items: center;
+}
+
+.header-tabs {
+  display: flex;
+}
+.header-tabs__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-tabs__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  font-family: inherit;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+.contact__list {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.contact__item {
+  margin-right: 50px;
+}
+
+.contact__item--last {
+  margin-right: 0px;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: $second;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+.contact__svg {
+  margin-right: 10px;
+  fill: currentColor;
+}
