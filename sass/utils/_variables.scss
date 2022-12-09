@@ -68,14 +68,33 @@ svg {
     color: $accent;
   }
   &::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 4px;
-    background: #2196f3;
-    border-radius: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    @media (min-widht: 768px) {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background: #2196f3;
+      border-radius: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+  }
+  &:hover .icons__svg,
+  &:focus .icons__svg {
+    fill: $third;
   }
 }

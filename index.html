@@ -18,47 +18,87 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- HEADER -->
+    <!--HEADER -->
     <header class="header">
-      <div class="container header--container">
+      <div class="container header__container">
         <a class="logo header__logo link" href="./index.html"
           >Web<span class="header__logo--color">Studio</span></a
         >
-        <nav class="header__nav">
-          <ul class="header-tabs list">
-            <li class="header-tabs__item">
-              <a class="header-tabs__link link accent" href="./index.html"
-                >Студія</a
-              >
-            </li>
-            <li class="header-tabs__item">
-              <a class="header-tabs__link link" href="./portfolio.html"
-                >Портфоліо</a
-              >
-            </li>
-            <li class="header-tabs__item">
-              <a class="header-tabs__link link" href="#">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="list contact__list">
-          <li class="contact__item">
-            <a class="contact__link link" href="mailto:info@devstudio.com"
-              ><svg class="contact__svg" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contact__item--last">
-            <a class="contact__link link" href="tel:+380961111111"
-              ><svg class="contact__svg" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <button type="button" class="header__mobile-btn js-open-menu">
+          <svg
+            class="header__mobile-svg"
+            width="40"
+            height="40"
+            aria-label="Перемикач мобільного меню"
+          >
+            <use
+              class="header__svg-menu"
+              href="./images/icons.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+        <div class="header__menu-container js-menu-container" id="mobile-menu">
+          <button class="header__menu-toggle js-close-menu">
+            <svg class="header__mobile-svg" width="30" height="30">
+              <use
+                class="header__svg-close"
+                href="./images/icons.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="header__navigation">
+            <nav class="header__nav">
+              <ul class="header-tabs list">
+                <li class="header-tabs__item">
+                  <a class="header-tabs__link link accent" href="./index.html"
+                    >Студія</a
+                  >
+                </li>
+                <li class="header-tabs__item">
+                  <a class="header-tabs__link link" href="./portfolio.html"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="header-tabs__item">
+                  <a class="header-tabs__link link" href="#">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="list contact__list">
+              <li class="contact__item">
+                <a class="contact__link link" href="mailto:info@devstudio.com"
+                  ><svg class="contact__svg" width="16" height="12">
+                    <use href="./images/icons.svg#icon-envelope"></use></svg
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contact__item">
+                <a class="contact__link link" href="tel:+380961111111"
+                  ><svg class="contact__svg" width="10" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="list">
+              <li>
+                <p>Instagram</p>
+              </li>
+              <li>
+                <p>Twitter</p>
+              </li>
+              <li>
+                <p>Facebook</p>
+              </li>
+              <li>
+                <p>LinkedIn</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
+
     <main>
       <!-- START -->
       <section class="start start--retreat">
@@ -147,7 +187,11 @@
             <li class="about-card__item">
               <div class="about-card__wrapper">
                 <img
-                  src="./images/squoosh/boxone.jpg"
+                  srcset="
+                    ./images/about/img_370.jpg 1x,
+                    ./images/about/img@2x.jpg  2x
+                  "
+                  src="./images/about/img_370.jpg"
                   alt="Робота1"
                   width="370"
                 />
@@ -158,7 +202,11 @@
             <li class="about-card__item">
               <div class="about-card__wrapper">
                 <img
-                  src="./images/squoosh/boxtwo.jpg"
+                  srcset="
+                    ./images/about/img_370-1.jpg 1x,
+                    ./images/about/img@2x-1.jpg  2x
+                  "
+                  src="./images/about/img_370-1.jpg"
                   alt="Робота2"
                   width="370"
                 />
@@ -169,7 +217,11 @@
             <li class="about-card__item">
               <div class="about-card__wrapper">
                 <img
-                  src="./images/squoosh/boxthree.jpg"
+                  srcset="
+                    ./images/about/img_370-2.jpg 1x,
+                    ./images/about/img@2x-2.jpg  2x
+                  "
+                  src="./images/about/img_370-2.jpg"
                   alt="Робота3"
                   width="370"
                 />
@@ -186,7 +238,16 @@
           <ul class="team-card team__card list">
             <li class="team-card__iteam">
               <img
-                src="./images/squoosh/igor.jpg"
+                srcset="
+                  ./images/team/img_270.jpg    270w,
+                  ./images/team/img_354.jpg    354w,
+                  ./images/team/img_450.jpg    450w,
+                  ./images/team/img_270_2x.jpg 540w,
+                  ./images/team/img_354_2x.jpg 708w,
+                  ./images/team/img_450_2x.jpg 900w
+                "
+                sizes="(min-widht: 1200px) 270px, (min-widht: 768px) 354px, (min-widht: 480px) 450px, 100vw"
+                src="./images/team/img_450.jpg"
                 alt="Product Designer"
                 width="270"
               />
@@ -201,28 +262,28 @@
                 </p>
                 <ul class="icons list">
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -233,7 +294,16 @@
             </li>
             <li class="team-card__iteam">
               <img
-                src="./images/squoosh/olga.jpg"
+                srcset="
+                  ./images/team/img_270-1.jpg    270w,
+                  ./images/team/img_354-1.jpg    354w,
+                  ./images/team/img_450-1.jpg    450w,
+                  ./images/team/img_270_2x-1.jpg 540w,
+                  ./images/team/img_354_2x-1.jpg 708w,
+                  ./images/team/img_450_2x-1.jpg 900w
+                "
+                sizes="(min-widht: 1200px) 270px, (min-widht: 768px) 354px, (min-widht: 480px) 450px, 100vw"
+                src="./images/team/img_450-1.jpg"
                 alt="Frontend Developer"
                 width="270"
               />
@@ -248,28 +318,28 @@
                 </p>
                 <ul class="icons list">
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -280,7 +350,16 @@
             </li>
             <li class="team-card__iteam">
               <img
-                src="./images/squoosh/kolia.jpg"
+                srcset="
+                  ./images/team/img_270-2.jpg    270w,
+                  ./images/team/img_354-2.jpg    354w,
+                  ./images/team/img_450-2.jpg    450w,
+                  ./images/team/img_270_2x-2.jpg 540w,
+                  ./images/team/img_354_2x-2.jpg 708w,
+                  ./images/team/img_450_2x-2.jpg 900w
+                "
+                sizes="(min-widht: 1200px) 270px, (min-widht: 768px) 354px, (min-widht: 480px) 450px, 100vw"
+                src="./images/team/img_450-2.jpg"
                 alt="Marketing"
                 width="270"
               />
@@ -295,28 +374,28 @@
                 </p>
                 <ul class="icons list">
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -327,7 +406,16 @@
             </li>
             <li class="team-card__iteam">
               <img
-                src="./images/squoosh/misha.jpg"
+                srcset="
+                  ./images/team/img_270-3.jpg    270w,
+                  ./images/team/img_354-3.jpg    354w,
+                  ./images/team/img_450-3.jpg    450w,
+                  ./images/team/img_270_2x-3.jpg 540w,
+                  ./images/team/img_354_2x-3.jpg 708w,
+                  ./images/team/img_450_2x-3.jpg 900w
+                "
+                sizes="(min-widht: 1200px) 270px, (min-widht: 768px) 354px, (min-widht: 480px) 450px, 100vw"
+                src="./images/team/img_450_2x-3.jpg"
                 alt="UI Designer"
                 width="270"
               />
@@ -342,28 +430,28 @@
                 </p>
                 <ul class="icons list">
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item icons__item--retreat">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="icons__item">
-                    <a class="icons__link link" href="#">
+                    <a class="icon-link link" href="#">
                       <svg class="icons__svg" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -383,35 +471,35 @@
           </h2>
           <nav class="clients__nav">
             <ul class="clients-list clients__list list">
-              <li class="clients-list__items clients-list__items--retreat">
+              <li class="clients-list__items">
                 <a class="clients-list__nav link" href="#"
                   ><svg class="clients-list__svg" width="106" height="60">
                     <use href="./images/icons.svg#icon-group"></use>
                   </svg>
                 </a>
               </li>
-              <li class="clients-list__items clients-list__items--retreat">
+              <li class="clients-list__items">
                 <a class="clients-list__nav link" href="#"
                   ><svg class="clients-list__svg" width="106" height="60">
                     <use href="./images/icons.svg#icon-c-tegline"></use>
                   </svg>
                 </a>
               </li>
-              <li class="clients-list__items clients-list__items--retreat">
+              <li class="clients-list__items">
                 <a class="clients-list__nav link" href="#"
                   ><svg class="clients-list__svg" width="106" height="60">
                     <use href="./images/icons.svg#icon-company"></use>
                   </svg>
                 </a>
               </li>
-              <li class="clients-list__items clients-list__items--retreat">
+              <li class="clients-list__items">
                 <a class="clients-list__nav link" href="#"
                   ><svg class="clients-list__svg" width="106" height="60">
                     <use href="./images/icons.svg#icon-foster"></use>
                   </svg>
                 </a>
               </li>
-              <li class="clients-list__items clients-list__items--retreat">
+              <li class="clients-list__items">
                 <a class="clients-list__nav link" href="#"
                   ><svg class="clients-list__svg" width="106" height="60">
                     <use href="./images/icons.svg#icon-brand"></use>
@@ -433,68 +521,70 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__contact">
-          <a class="footer__logo logo link" href="/"
-            >Web<span class="footer__logo--color">Studio</span></a
-          >
-          <address class="footer__address address">
-            <ul class="address__list list">
-              <li class="address__items">
-                <a
-                  class="address__link address__link--color link"
-                  href="https://goo.gl/maps/bSSHPCnqy66o2TcW6"
-                  target="_blank"
-                  rel="noopenner nofollow noreferrer"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+        <div class="footer__medium">
+          <div class="footer__contact">
+            <a class="footer__logo logo link" href="/"
+              >Web<span class="footer__logo--color">Studio</span></a
+            >
+            <address class="footer__address address">
+              <ul class="address__list list">
+                <li class="address__items">
+                  <a
+                    class="address__link address__link--color link"
+                    href="https://goo.gl/maps/bSSHPCnqy66o2TcW6"
+                    target="_blank"
+                    rel="noopenner nofollow noreferrer"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address__items">
+                  <a class="address__link link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address__items">
+                  <a class="address__link link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__media-container">
+            <p class="footer__media-text footer__media-text--retreat">
+              приєднуйтесь
+            </p>
+            <ul class="footer__media media list">
+              <li class="media__item">
+                <a class="icon-link link" href="#">
+                  <svg class="media__icons" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__items">
-                <a class="address__link link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+              <li class="media__item">
+                <a class="icon-link link" href="#">
+                  <svg class="media__icons" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__items">
-                <a class="address__link link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
+              <li class="media__item">
+                <a class="icon-link link" href="#">
+                  <svg class="media__icons" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="media__item">
+                <a class="icon-link link" href="#">
+                  <svg class="media__icons" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer__media-container">
-          <p class="footer__media-text footer__media-text--retreat">
-            приєднуйтесь
-          </p>
-          <ul class="footer__media media list">
-            <li class="media__item">
-              <a class="media__link link" href="#">
-                <svg class="media__icons" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="media__item">
-              <a class="media__link link" href="#">
-                <svg class="media__icons" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="media__item">
-              <a class="media__link link" href="#">
-                <svg class="media__icons" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="media__item">
-              <a class="media__link link" href="#">
-                <svg class="media__icons" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="footer__signup-container">
           <form class="footer-form footer__form">
@@ -578,6 +668,14 @@
         </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobileMenu.js"></script>
   </body>
 </html>

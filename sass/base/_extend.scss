@@ -1,0 +1,43 @@
+%section-about {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  padding-bottom: 94px;
+}
+
+%section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+%title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: calc(36 / 28);
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+  }
+}
+
+%team-text {
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+%icon-social {
+  width: 44px;
+  height: 44px;
+  background-color: $third;
+  border-radius: 50%;
+}

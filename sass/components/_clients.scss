@@ -1,31 +1,38 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @extend %section;
 
   &__title {
-    font-size: 36px;
-    line-height: calc(42 / 36);
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $main;
+    @extend %title;
   }
-  &__title--retreat {
-    margin-bottom: 50px;
+  &__list {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 210px 210px;
+    grid-template-rows: 92px 92px 92px;
+    gap: 30px;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 226px 226px 226px;
+      grid-template-rows: 92px 92px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
-.clients__list {
-  display: flex;
-  justify-content: center;
-}
 .clients-list__items {
-  width: 170px;
-  height: 92px;
   border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    height: 92px;
+  }
 }
-.clients-list__items--retreat {
-  margin-right: 30px;
-}
+
 .clients-list__nav {
   display: flex;
   justify-content: center;

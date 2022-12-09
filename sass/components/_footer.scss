@@ -1,18 +1,24 @@
 .footer {
-  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $footer;
 
   &__container {
-    display: flex;
-    align-items: baseline;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+    }
   }
   &__contact {
-    margin-right: 70px;
+    @media screen and (min-width: 768px) {
+      margin-right: 165px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 70px;
+    }
   }
   &__logo {
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
   }
   &__logo--color {
@@ -24,13 +30,28 @@
   &__media {
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
   }
   &__signup-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
   }
 }
-
+.footer__medium {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 60px;
+    margin-left: 76px;
+    text-align: center;
+  }
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
 .address__items:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -57,33 +78,24 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $third;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
+
 .footer__media-text--retreat {
   margin-bottom: 20px;
 }
 
 .media__item {
-  width: 44px;
-  height: 44px;
+  @extend %icon-social;
   background-color: rgba($third, 0.1);
-  border-radius: 50%;
 }
 .media__item:not(:last-child) {
   margin-right: 10px;
 }
-.media__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
 
-  &:hover,
-  &:focus {
-    background-color: $accent;
-  }
-}
 .media__icons {
   fill: $third;
 }
@@ -94,14 +106,21 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $third;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .footer-form__send--retreat {
   margin-bottom: 20px;
 }
 .footer-form__container {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
+
 .send__label {
   margin-right: 12px;
 }
@@ -128,11 +147,16 @@
     color: rgba($third, 0.6);
   }
 }
+.send__button {
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+  }
+}
 .send__button::after {
   content: "";
   width: 24px;
   height: 24px;
   margin-left: 10px;
-  background-image: url(../images/marker.png);
+  // background-image: ;
   background: $third;
 }
