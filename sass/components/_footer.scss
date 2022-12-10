@@ -49,9 +49,14 @@
     text-align: center;
   }
   display: flex;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
 }
+.footer__contact {
+  margin-bottom: 60px;
+}
+
 .address__items:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -157,6 +162,6 @@
   width: 24px;
   height: 24px;
   margin-left: 10px;
-  // background-image: ;
+  background-image: url(../images/marker.png);
   background: $third;
 }

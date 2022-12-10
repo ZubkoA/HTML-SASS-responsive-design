@@ -1,6 +1,8 @@
 .start {
   text-align: center;
   background-color: $background-start;
+  background-image: linear-gradient(rgba($grey, 0.4), rgba($grey, 0.4)),
+    url(../images/start/img_480.jpg);
 
   @media screen and (min-width: 480px) {
     background-image: linear-gradient(rgba($grey, 0.4), rgba($grey, 0.4)),

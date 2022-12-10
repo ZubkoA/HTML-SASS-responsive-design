@@ -25,6 +25,7 @@
 .header-tabs {
   display: flex;
   flex-direction: column;
+  margin-bottom: auto;
 }
 .header-tabs__item {
   padding-bottom: 32px;
@@ -74,6 +75,11 @@
   &:focus {
     color: $accent;
   }
+}
+.contact__link--size {
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
 }
 
 .contact__svg {

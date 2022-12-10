@@ -10,8 +10,12 @@
       display: none;
     }
   }
-  &__mobile-svg {
-    fill: $black;
+}
+.header__mobile-svg {
+  fill: $black;
+  .header__mobile-btn:hover &,
+  .header__mobile-btn:focus & {
+    fill: $accent;
   }
 }
 
@@ -26,9 +30,6 @@
 
 .header__menu {
   display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 @media (max-width: 767px) {
@@ -53,9 +54,29 @@
   }
 }
 
-.header__menu-toggle:hover,
-.header__menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+.header__btn-close {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-right: 15px;
+
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none;
+    }
+  }
+  &:hover .header__mobile-svg {
+    fill: $accent;
+  }
 }
 
 .header__menu-container {
@@ -64,7 +85,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
   background-color: $third;
   z-index: 999;
 
@@ -76,18 +96,37 @@
   transform: translateX(0);
 }
 .header__navigation {
+  // min-width: 320px;
+  // max-width: 1170px;
+  display: flex;
+  flex-direction: column;
   padding: 48px 40px;
 }
+.header__social-mobile {
+  display: flex;
+  gap: 20px;
+}
 
-// .header__menu-container .header__mobile-btn {
-//   position: absolute;
-//   top: 16px;
-//   right: 16px;
-//   color: #fff;
-// }
+.header__social-item {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  letter-spacing: 0.02em;
+  color: $accent;
 
-// .header__mobile-menu {
-//   padding: 0;
-//   margin: 0;
-//   list-style: none;
-// }
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    background: rgba($main, 0.2);
+    border: 1px solid rgba($main, 0.2);
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.header-tabs {
+  margin-bottom: auto;
+}
