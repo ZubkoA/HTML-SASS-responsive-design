@@ -27,7 +27,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    @include fonts(14px, fals, 16, 0.03em, $third);
+    @include fonts(14px, 16px, 0.03em, $third);
 
     text-transform: uppercase;
 

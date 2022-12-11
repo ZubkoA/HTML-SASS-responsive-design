@@ -1,9 +1,9 @@
 @mixin fonts(
   $size: false,
-  $weight: false,
   $lh: fals,
   $ls: false,
-  $color: folse
+  $color: folse,
+  $weight: false
 ) {
   @if $size {
     font-size: $size;
@@ -12,10 +12,10 @@
     font-weight: $weight;
   }
   @if $lh {
-    line-height: calc($lh / $size);
+    line-height: calc(#{$lh} / #{$size});
   }
   @if $ls {
-    letter-spacing: ls;
+    letter-spacing: $ls;
   }
   @if $color {
     color: $color;

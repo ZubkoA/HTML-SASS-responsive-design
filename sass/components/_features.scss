@@ -32,8 +32,7 @@
 }
 
 .features-card__title {
-  // @include fonts(false, false, 16, 0.03em, false);
-
+  @include fonts(14px, 16px, 0.03em);
   text-transform: uppercase;
 }
 .features-card__title--retreat {
@@ -41,8 +40,7 @@
 }
 
 .feartures-card__description {
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-  color: $second;
+  @include fonts(14px, 24px, 0.03em, $second);
+
   margin-bottom: 30px;
 }

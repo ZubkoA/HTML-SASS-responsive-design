@@ -69,9 +69,7 @@
 
 .address__link {
   display: inline-block;
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-  color: rgba($third, 0.6);
+  @include fonts(14px, 24px, 0.03em, rgba($third, 0.6));
 
   &:hover,
   &:focus {
@@ -83,12 +81,7 @@
 }
 
 .footer__media-text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $third;
+  @include fonts(14px, 16px, 0.03em, $third, 700);
   text-align: center;
 }
 
@@ -111,12 +104,8 @@
   fill: $third;
 }
 .footer-form__send {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
+  @include fonts(14px, 16px, 0.03em, $third, 700);
   text-transform: uppercase;
-  color: $third;
   text-align: center;
   @media screen and (min-width: 1200px) {
     text-align: start;
@@ -157,12 +146,10 @@
     background-color: $accent;
   }
   &::placeholder {
-    font-size: 16px;
-    line-height: calc(20 / 16);
+    @include fonts(16px, 20px, 0.03em, rgba($third, 0.6));
+
     display: flex;
     align-items: center;
-    letter-spacing: 0.03em;
-    color: rgba($third, 0.6);
   }
 }
 .send__button {
