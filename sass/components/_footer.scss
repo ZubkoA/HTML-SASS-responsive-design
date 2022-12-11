@@ -26,6 +26,7 @@
   }
   &__address {
     font-style: normal;
+    text-align: center;
   }
   &__media {
     display: flex;
@@ -37,24 +38,29 @@
   }
   &__signup-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin-left: auto;
+    justify-content: center;
   }
 }
 .footer__medium {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-bottom: 60px;
-    margin-left: 76px;
-    text-align: center;
-  }
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 .footer__contact {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
   margin-bottom: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .address__items:not(:last-child) {
@@ -83,14 +89,14 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $third;
-
-  @media screen and (max-width: 767px) {
-    text-align: center;
-  }
+  text-align: center;
 }
 
 .footer__media-text--retreat {
   margin-bottom: 20px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 5px;
+  }
 }
 
 .media__item {
@@ -111,9 +117,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $third;
-
-  @media screen and (max-width: 767px) {
-    text-align: center;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
   }
 }
 .footer-form__send--retreat {
@@ -127,9 +133,16 @@
 }
 
 .send__label {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 0;
+  }
   margin-right: 12px;
 }
 .send__input {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+  margin-bottom: 20px;
   width: 358px;
   height: 50px;
   padding-left: 16px;
@@ -163,5 +176,4 @@
   height: 24px;
   margin-left: 10px;
   background-image: url(../images/marker.png);
-  background: $third;
 }

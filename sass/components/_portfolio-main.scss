@@ -1,7 +1,7 @@
 .drafts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // gap: 30px;
   box-sizing: content-box;
 
   &__wrapper {
@@ -32,7 +32,27 @@
     color: $second;
   }
 }
+.drafts {
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid: repeat(5, 404px) / repeat(2, 354px);
+    gap: 30px;
+  }
 
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__items {
+    @media screen and (min-width: 1200px) {
+      // flex-basis: calc((100% - 90px) / 4);
+      background-color: $third;
+      filter: drop-shadow(0px 4px 4px rgba($black, 0.25));
+      border-radius: 0px 0px 4px 4px;
+    }
+  }
+}
 .drafts__link {
   display: block;
   color: inherit;

@@ -10,8 +10,7 @@
 .team__card {
   @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-columns: 354px 354px;
-    grid-template-rows: 536px 536px;
+    grid: repeat(2, 536px) / repeat(2, 354px);
     gap: 30px;
   }
 

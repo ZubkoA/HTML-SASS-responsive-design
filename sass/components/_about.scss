@@ -27,11 +27,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    @include fonts(14px, fals, 16, 0.03em, $third);
 
-    line-height: calc(16 / 14);
-    letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: $third;
+
     background-color: rgba($grey, 0.8);
   }
 }

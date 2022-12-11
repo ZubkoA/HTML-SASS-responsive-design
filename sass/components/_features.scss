@@ -5,8 +5,7 @@
 .features__card {
   @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-columns: 354px 354px;
-    grid-template-rows: 224px 224px;
+    grid: repeat(2, 224px) / repeat(2, 354px);
     gap: 30px;
   }
   @media screen and (min-width: 1200px) {
@@ -33,9 +32,8 @@
 }
 
 .features-card__title {
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
+  // @include fonts(false, false, 16, 0.03em, false);
+
   text-transform: uppercase;
 }
 .features-card__title--retreat {
