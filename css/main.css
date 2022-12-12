@@ -865,6 +865,11 @@ svg {
     width: 100%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer__form {
+    margin-left: auto;
+  }
+}
 
 .footer-form__send {
   font-size: 14px;
@@ -902,6 +907,12 @@ svg {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .send__label {
     margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -920,7 +931,6 @@ svg {
 }
 @media screen and (min-width: 768px) {
   .send__input {
-    margin-bottom: 20;
     width: 450px;
   }
 }
