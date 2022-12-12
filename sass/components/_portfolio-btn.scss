@@ -5,7 +5,6 @@
 .portfolio__search {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
   min-width: 326px;
   margin-bottom: 40px;
   @media screen and (min-width: 768px) {
@@ -14,6 +13,10 @@
   }
   @media screen and (min-width: 1200px) {
     margin: 0 auto 50px;
+  }
+  .search__item {
+    margin-bottom: 15px;
+    margin-right: 8px;
   }
 }
 .search__btn {

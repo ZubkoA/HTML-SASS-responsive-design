@@ -1459,7 +1459,6 @@ svg {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 8px;
   min-width: 326px;
   margin-bottom: 40px;
 }
@@ -1475,6 +1474,10 @@ svg {
   .portfolio__search {
     margin: 0 auto 50px;
   }
+}
+.portfolio__search .search__item {
+  margin-bottom: 15px;
+  margin-right: 8px;
 }
 
 .search__btn {
