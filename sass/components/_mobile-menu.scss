@@ -100,18 +100,19 @@
 
 .header__menu-container.is-open {
   transform: translateX(0);
-}
-.header__navigation {
   display: flex;
   align-items: center;
   @media screen and (max-width: 767px) {
     flex-direction: column;
-    padding: 48px 40px;
     align-items: flex-start;
   }
 }
+.header__nav {
+  padding: 48px 40px;
+}
 .header__cont-container {
-  margin-top: 302px;
+  margin-top: auto;
+  padding: 48px 40px;
   @media screen and (min-width: 768px) {
     margin-top: 0;
   }
@@ -127,7 +128,7 @@
 
 .header__social-item {
   position: relative;
-  @include fonts(18px, 22px, 0.02em, $accent, 500);
+  @include fonts(18, 22, 0.02em, $accent, 500);
 }
 .header__social-item--line::after {
   content: "";

@@ -58,7 +58,7 @@
   padding: 40px;
 
   &__text {
-    @include fonts(20px, 23px, 0.03em, $main, 700);
+    @include fonts(20, 23, 0.03em, $main, 700);
 
     text-align: center;
 
@@ -75,7 +75,7 @@
     margin-bottom: 10px;
   }
   &__name {
-    @include fonts(12px, 14px, 0.01em, $second);
+    @include fonts(12, 14, 0.01em, $second);
     margin-bottom: 4px;
   }
   &__icon {
@@ -108,7 +108,7 @@
   resize: none;
   height: 120px;
   padding: 12px 16px;
-  @include fonts(12px, 14px, 0.01em, $main);
+  @include fonts(12, 14, 0.01em, $main);
 
   border: 1px solid rgba($main, 0.2);
   border-radius: 4px;
@@ -118,7 +118,7 @@
     outline: 0;
   }
   &::placeholder {
-    @include fonts(12px, 14px, 0.01em, rgba($second, 0.5));
+    @include fonts(12, 14, 0.01em, rgba($second, 0.5));
   }
 }
 
@@ -155,9 +155,9 @@
 
 .form__agree {
   @media screen and (max-width: 1199px) {
-    @include fonts(14px, 12px, 0.03em, $second);
+    @include fonts(14, 12, 0.03em, $second);
   }
-  @include fonts(24px, 14px, 0.03em, $second);
+  @include fonts(24, 14, 0.03em, $second);
 }
 .form__link {
   color: $accent;

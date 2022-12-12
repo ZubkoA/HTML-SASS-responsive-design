@@ -7,11 +7,12 @@
   &__list {
     box-sizing: border-box;
     display: grid;
-    grid: repeat(3, 92px) / repeat(2, 210px);
     gap: 30px;
+    @media screen and (min-width: 480px) {
+      grid: repeat(3, 92px) / repeat(2, 210px);
+    }
 
     @media screen and (min-width: 768px) {
-      display: grid;
       grid: repeat(2, 92px) / repeat(3, 226px);
     }
 

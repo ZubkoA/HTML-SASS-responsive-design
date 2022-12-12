@@ -37,9 +37,9 @@
 
 .header-tabs__link {
   @media screen and (max-width: 767px) {
-    @include fonts(40px, 47px, 0.02em, inherit, 500);
+    @include fonts(40, 47, 0.02em, inherit, 500);
   }
-  @include fonts(14px, 16px, 0.02em);
+  @include fonts(14, 16, 0.02em, inherit);
 
   padding-top: 32px;
   padding-bottom: 32px;
@@ -76,12 +76,12 @@
 
 .contact__link {
   @media screen and (min-width: 480px) {
-    @include fonts(34px, 40px, 0.02em, $second, 500);
+    @include fonts(34, 40, 0.02em, $second, 500);
   }
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-    @include fonts(12px, 14px, 0.02em, $second, 500);
+    @include fonts(12, 14, 0.02em, $second, 500);
   }
 
   &:hover,
@@ -96,7 +96,7 @@
 }
 .contact__link--size {
   @media screen and (max-width: 767px) {
-    @include fonts(24px, 28px, 0.02em);
+    @include fonts(24, 28, 0.02em, $second);
   }
 }
 

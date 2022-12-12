@@ -6,7 +6,7 @@
   $weight: false
 ) {
   @if $size {
-    font-size: $size;
+    font-size: $size + px;
   }
   @if $weight {
     font-weight: $weight;

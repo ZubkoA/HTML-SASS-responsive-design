@@ -61,11 +61,11 @@
 .start__title {
   max-width: 360px;
   margin: 0 auto 30px;
-  @include fonts(26px, 42px, 0.06em, $third, 900);
+  @include fonts(26, 42, 0.06em, $third, 900);
 
   @media screen and (min-width: 1200px) {
     max-width: 696px;
-    @include fonts(44px, 60px, 0.06em, $third, 900);
+    @include fonts(44, 60, 0.06em, $third, 900);
   }
   text-transform: uppercase;
 }
