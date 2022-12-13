@@ -565,11 +565,13 @@ svg {
   background-color: #f5f4fa;
 }
 
+.team__card {
+  gap: 30px;
+}
 @media screen and (min-width: 768px) {
   .team__card {
     display: grid;
     grid: repeat(2, 536px)/repeat(2, 354px);
-    gap: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -579,7 +581,6 @@ svg {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 30px;
   }
 }
 
@@ -588,6 +589,11 @@ svg {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (max-width: 767px) {
+  .team-card__iteam {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .team-card__iteam {
@@ -665,11 +671,11 @@ svg {
 
 .clients-list__items {
   border-radius: 4px;
+  height: 92px;
 }
 @media screen and (min-width: 1200px) {
   .clients-list__items {
     width: 170px;
-    height: 92px;
   }
 }
 

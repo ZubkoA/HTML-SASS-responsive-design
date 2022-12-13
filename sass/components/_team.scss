@@ -8,19 +8,21 @@
 }
 
 .team__card {
+  gap: 30px;
   @media screen and (min-width: 768px) {
     display: grid;
     grid: repeat(2, 536px) / repeat(2, 354px);
-    gap: 30px;
   }
 
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
   }
 }
 .team-card__iteam {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
   background-color: $third;
   filter: drop-shadow(0px 4px 4px rgba($black, 0.25));
   border-radius: 0px 0px 4px 4px;
